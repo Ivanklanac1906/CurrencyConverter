@@ -1,3 +1,9 @@
+
+const state = {
+    openedDraw: null
+}
+
+
 //* selectors
 
 const ui = {
@@ -16,6 +22,7 @@ const setupEventListeners = ()  => {
 // event handlers
 
 const showDrawer = (e) => {
+    state.openedDraw = e.target.id;
     ui.drawer.classList.add("show");
 };
 
