@@ -1,38 +1,24 @@
 
-const state = {
-    openedDraw: null
-}
 
-
-//* selectors
 
 const ui = {
     controls: document.getElementById("controls"),
     drawer: document.getElementById("drawer"),
-    dismissBtn: document.getElementById("dismiss-btn")
+    dismissBtn: document.getElementById("dismissBtn")
 };
 
-// event listeners
-
-const setupEventListeners = ()  => {
+const setupEventListeners = (e) => {
     ui.controls.addEventListener("click", showDrawer);
     ui.dismissBtn.addEventListener("click", hideDrawer);
 };
 
-// event handlers
-
 const showDrawer = (e) => {
-    state.openedDraw = e.target.id;
     ui.drawer.classList.add("show");
-};
+}
 
-function hideDrawer(e) {
+
+const hideDrawer = (e) =>{
     ui.drawer.classList.remove("show");
-};
-
-
-
-
-
+}
 
 setupEventListeners();
