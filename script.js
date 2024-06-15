@@ -17,7 +17,7 @@ const showDrawer = (e) => {
 }
 
 
-const hideDrawer = (e) =>{
+const hideDrawer = (e) => {
     ui.drawer.classList.remove("show");
 }
 
